@@ -128,12 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AbstractWindow.cpp" />
+    <ClCompile Include="CoordinateSystem.cpp" />
     <ClCompile Include="DispatchEvent.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbstractWindow.h" />
+    <ClInclude Include="CoordinateSystem.h" />
     <ClInclude Include="DispatchEvent.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
