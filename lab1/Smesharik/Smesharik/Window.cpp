@@ -43,7 +43,9 @@ CWindow::CWindow()
         m_flowers.push_back(std::move(pFlower));
     }
 	*/
-	m_meadow.SetPosition({ 400, 300 });
+	auto meadow = std::make_unique<CMeadow>();
+	meadow->SetPosition({ 400, 300 });
+	m_shapes.push_back(std::move(meadow));
 
     SetBackgroundColor(QUIET_WHITE);
 }
@@ -57,42 +59,12 @@ void CWindow::OnDrawWindow(const glm::ivec2 &size)
 {
     SetupView(size);
 
-	m_meadow.Draw();
-    for (const auto &pFlower : m_flowers)
+    for (const auto &pShape : m_shapes)
     {
-        pFlower->Draw();
+        pShape->Draw();
     }
 }
 
-void CWindow::OnDragBegin(const glm::vec2 &pos)
-{
-    auto flowers = boost::adaptors::reverse(m_flowers);
-    auto it = boost::find_if(flowers, [&](const auto &pFlower) {
-        return pFlower->HitTest(pos);
-    });
-    if (it != flowers.end())
-    {
-        m_draggingFlower = it->get();
-        m_dragOffset = pos - m_draggingFlower->GetPosition();
-    }
-}
-
-void CWindow::OnDragMotion(const glm::vec2 &pos)
-{
-    if (m_draggingFlower)
-    {
-        m_draggingFlower->SetPosition(pos - m_dragOffset);
-    }
-}
-
-void CWindow::OnDragEnd(const glm::vec2 &pos)
-{
-    if (m_draggingFlower)
-    {
-        m_draggingFlower->SetPosition(pos - m_dragOffset);
-        m_draggingFlower = nullptr;
-    }
-}
 
 void CWindow::SetupView(const glm::ivec2 &size)
 {
