@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AbstractWindow.cpp" />
+    <ClCompile Include="BezierCurve.cpp" />
     <ClCompile Include="DispatchEvent.cpp" />
     <ClCompile Include="Drawable.cpp" />
     <ClCompile Include="Flower.cpp" />
@@ -31,9 +32,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbstractWindow.h" />
+    <ClInclude Include="BezierCurve.h" />
     <ClInclude Include="DispatchEvent.h" />
     <ClInclude Include="Drawable.h" />
     <ClInclude Include="Flower.h" />
+    <ClInclude Include="Header.h" />
     <ClInclude Include="Meadow.h" />
     <ClInclude Include="MovableFlower.h" />
     <ClInclude Include="stdafx.h" />

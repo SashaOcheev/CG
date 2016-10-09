@@ -2,6 +2,7 @@
 #include "Window.h"
 #include <boost/range/algorithm/find_if.hpp>
 #include <boost/range/adaptor/reversed.hpp>
+#include "BezierCurve.h"
 
 namespace
 {
