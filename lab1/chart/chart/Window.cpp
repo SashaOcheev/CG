@@ -22,8 +22,6 @@ void CWindow::OnUpdateWindow(float deltaSeconds)
 void CWindow::OnDrawWindow(const glm::ivec2 &size)
 {
     SetupView(size);
-
-	glColor3f(0, 0, 0);
 	auto coor = CoordinateSystem({ 30, 30 }, { 20, 20 }, { 400, 300 }, { 10, 10 });
 	coor.Draw();
 

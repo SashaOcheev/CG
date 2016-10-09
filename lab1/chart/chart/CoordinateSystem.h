@@ -12,7 +12,7 @@ public:
 	void Draw();
 
 private:
-	void DrawChart();
+	void DrawChart(int k);
 	void DrawAxes();
 	glm::ivec2 ConvertCoorToDraw(glm::dvec2 realCoordinates) const;
 	glm::ivec2 ConvertCoorToDraw(double x, double y) const;

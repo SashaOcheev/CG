@@ -19,22 +19,24 @@ CoordinateSystem::CoordinateSystem(glm::ivec2 unit, glm::ivec2 size, glm::ivec2 
 
 void CoordinateSystem::Draw()
 {
+	glColor3f(0, 0, 0);
 	DrawAxes();
-	DrawChart();
+	glColor3f(1, 0.2, 0.2);
+	DrawChart(10);
 }
 
-void CoordinateSystem::DrawChart()
+void CoordinateSystem::DrawChart(int k)
 {
 	glBegin(GL_LINE_STRIP);
-	auto lim = 10 * M_PI;
+	auto limit = k * M_PI;
 	double r = 0;
-	for (double angle = 0; abs(angle) < abs(lim); angle -= 1.0 / 10)
+	for (double angle = 0; abs(angle) < abs(limit); angle -= 1.0 / k)
 	{
 		double x = r * cos(angle);
 		double y = r * sin(angle);
 		auto curCoor = ConvertCoorToDraw(x, y);
 		glVertex2f(curCoor.x, curCoor.y);
-		r += 1 / lim;
+		r += 1 / limit;
 	}
 	glEnd();
 }
@@ -75,8 +77,10 @@ void CoordinateSystem::Init(glm::ivec2 unit, glm::ivec2 size, glm::ivec2 display
 
 glm::ivec2 CoordinateSystem::ConvertCoorToDraw(glm::dvec2 realCoordinates) const
 {
-	return { (realCoordinates.x + m_center.x) * m_unit.x + m_displayStart.x - m_unit.x * m_center.x,
-		(realCoordinates.y + m_center.y) * m_unit.y + m_displayStart.y - m_unit.y * m_center.y };
+	//return { (realCoordinates.x + m_center.x) * m_unit.x + m_displayStart.x - m_unit.x * m_center.x,
+		//(realCoordinates.y + m_center.y) * m_unit.y + m_displayStart.y - m_unit.y * m_center.y };
+	return (glm::ivec2( realCoordinates)+ m_center) * m_unit + m_displayStart - m_unit * m_center;
+
 }
 
 glm::ivec2 CoordinateSystem::ConvertCoorToDraw(double x, double y) const
