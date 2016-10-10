@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="AbstractWindow.cpp" />
     <ClCompile Include="BezierCurve.cpp" />
+    <ClCompile Include="Circle.cpp" />
     <ClCompile Include="DispatchEvent.cpp" />
     <ClCompile Include="Drawable.cpp" />
     <ClCompile Include="Flower.cpp" />
@@ -34,6 +35,7 @@
   <ItemGroup>
     <ClInclude Include="AbstractWindow.h" />
     <ClInclude Include="BezierCurve.h" />
+    <ClInclude Include="Circle.h" />
     <ClInclude Include="DispatchEvent.h" />
     <ClInclude Include="Drawable.h" />
     <ClInclude Include="Flower.h" />
@@ -43,6 +45,9 @@
     <ClInclude Include="Rock.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{82B357BB-00F3-45FD-AA4E-7D7CB1C8944D}</ProjectGuid>

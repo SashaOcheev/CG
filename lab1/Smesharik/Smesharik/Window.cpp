@@ -59,6 +59,11 @@ CWindow::CWindow()
 	//meadow->SetPosition({ 400, 300 });
 	m_shapes.push_back(std::move(meadow));
 
+	//Солнце
+	auto sun = std::make_unique<CCircle>(70.f);
+	sun->SetPosition({ 700, 100 });
+	m_shapes.push_back(std::move(sun));
+
 	SetBackgroundColor({ 0.4f, 0.7f, 1.f, 1.f });
 }
 
