@@ -4,9 +4,11 @@ class CMeadow :
 	public Drawable
 {
 public:
-	CMeadow() = default;
+	CMeadow(std::vector<glm::fvec2> pivots = {});
 
 private:
 	void Redraw() const override;
+
+	std::vector<glm::fvec2> m_line;
 };
 

@@ -45,7 +45,7 @@ CWindow::CWindow()
     }
 	*/
 	auto meadow = std::make_unique<CMeadow>();
-	meadow->SetPosition({ 400, 300 });
+	//meadow->SetPosition({ 400, 300 });
 	m_shapes.push_back(std::move(meadow));
 
     SetBackgroundColor(QUIET_WHITE);

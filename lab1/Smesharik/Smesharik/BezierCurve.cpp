@@ -31,7 +31,7 @@ size_t GetCombinationsCount(size_t n, size_t k)
 }
 
 // number - номер вершины, count - количество вершин, position - положение кривой (от 0 до 1)
-size_t GetBezierBasis(const size_t number, const size_t count, const float position)
+float GetBezierBasis(const size_t number, const size_t count, const float position)
 {
 	// считаем i-й элемент полинома Берштейна
 	return GetCombinationsCount(count, number) * pow(position, number) * pow(1 - position, count - number);
@@ -40,21 +40,20 @@ size_t GetBezierBasis(const size_t number, const size_t count, const float posit
 
 // arr - массив опорных точек
 // step - шаг при расчете кривой (0 < step < 1), по умолчанию 0.01
-std::vector<glm::fvec2> GetBezierCurve(const std::vector<glm::fvec2> &arr, float step = 0.01)
+std::vector<glm::fvec2> GetBezierCurve(const std::vector<glm::fvec2> &arr, float step)
 {
 	std::vector<glm::fvec2> res;
 
-	for (float t = 0; t < 1 + step; t += step)
+	for (float t = 0.f; t < 1.f + step; t += step)
 	{
-		if (t > 1)
-		{
-			t = 1;
-		}
+		(t > 1.f) ? 1.f : t;
+
+		res.push_back({ 0, 0 });
 
 		for (size_t i = 0; i < arr.size(); ++i)
 		{
-			auto b = GetBezierBasis(i, arr.size() - 1, t);
-			res.push_back({ arr[i].x * b, arr[i].y * b });
+			auto basis = GetBezierBasis(i, arr.size() - 1, t);
+			res.back() += glm::fvec2({ arr[i].x * basis, arr[i].y * basis });
 		}
 	}
 
