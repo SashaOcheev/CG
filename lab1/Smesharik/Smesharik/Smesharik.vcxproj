@@ -27,6 +27,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Meadow.cpp" />
     <ClCompile Include="MovableFlower.cpp" />
+    <ClCompile Include="Rock.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
@@ -39,6 +40,7 @@
     <ClInclude Include="Header.h" />
     <ClInclude Include="Meadow.h" />
     <ClInclude Include="MovableFlower.h" />
+    <ClInclude Include="Rock.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>

@@ -2,6 +2,7 @@
 #include "DispatchEvent.h"
 #include "MovableFlower.h"
 #include "Meadow.h"
+#include "Rock.h"
 #include <vector>
 
 class CWindow : public CAbstractInputControlWindow

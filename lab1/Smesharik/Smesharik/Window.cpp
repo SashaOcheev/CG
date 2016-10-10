@@ -44,6 +44,17 @@ CWindow::CWindow()
         m_flowers.push_back(std::move(pFlower));
     }
 	*/
+
+	//горы
+	auto rock = std::make_unique<CRock>(60.f);
+	rock->SetPosition({ 75, 90 });
+	m_shapes.push_back(std::move(rock));
+	
+	rock = std::make_unique<CRock>(60.f);
+	rock->SetPosition({ 230, 30 });
+	m_shapes.push_back(std::move(rock));
+
+	//луг
 	auto meadow = std::make_unique<CMeadow>();
 	//meadow->SetPosition({ 400, 300 });
 	m_shapes.push_back(std::move(meadow));
