@@ -48,7 +48,7 @@ CWindow::CWindow()
 	//meadow->SetPosition({ 400, 300 });
 	m_shapes.push_back(std::move(meadow));
 
-    SetBackgroundColor(QUIET_WHITE);
+	SetBackgroundColor({ 0.4f, 0.7f, 1.f, 1.f });
 }
 
 void CWindow::OnUpdateWindow(float deltaSeconds)
