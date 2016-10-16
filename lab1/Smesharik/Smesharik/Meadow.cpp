@@ -16,7 +16,7 @@ CMeadow::CMeadow(std::vector<glm::fvec2> pivots)
 			{ 800, 280 },
 		};
 	}
-	m_line = GetBezierCurve(pivots, 0.001);
+	m_line = GetBezierCurve(pivots, 0.001f);
 }
 
 void CMeadow::Redraw() const

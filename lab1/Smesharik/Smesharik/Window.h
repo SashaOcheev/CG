@@ -4,6 +4,7 @@
 #include "Meadow.h"
 #include "Circle.h"
 #include "Rock.h"
+#include "Cloud.h"
 #include <vector>
 
 class CWindow : public CAbstractInputControlWindow

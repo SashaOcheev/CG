@@ -45,6 +45,21 @@ CWindow::CWindow()
     }
 	*/
 
+	//Солнце
+	auto sun = std::make_unique<CCircle>(70.f);
+	sun->SetPosition({ 700, 100 });
+	sun->SetColor({ 1.f, 1.f, 0.f });
+	m_shapes.push_back(std::move(sun));
+
+	//облака
+	auto cloud = std::make_unique<CCloud>();
+	cloud->SetPosition({ 180, 60 });
+	m_shapes.push_back(std::move(cloud));
+
+	cloud = std::make_unique<CCloud>();
+	cloud->SetPosition({ 600, 100 });
+	m_shapes.push_back(std::move(cloud));
+
 	//горы
 	auto rock = std::make_unique<CRock>(60.f);
 	rock->SetPosition({ 75, 90 });
@@ -58,11 +73,6 @@ CWindow::CWindow()
 	auto meadow = std::make_unique<CMeadow>();
 	//meadow->SetPosition({ 400, 300 });
 	m_shapes.push_back(std::move(meadow));
-
-	//Солнце
-	auto sun = std::make_unique<CCircle>(70.f);
-	sun->SetPosition({ 700, 100 });
-	m_shapes.push_back(std::move(sun));
 
 	SetBackgroundColor({ 0.4f, 0.7f, 1.f, 1.f });
 }

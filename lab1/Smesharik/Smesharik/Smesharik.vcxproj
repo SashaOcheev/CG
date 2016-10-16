@@ -22,6 +22,7 @@
     <ClCompile Include="AbstractWindow.cpp" />
     <ClCompile Include="BezierCurve.cpp" />
     <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Cloud.cpp" />
     <ClCompile Include="DispatchEvent.cpp" />
     <ClCompile Include="Drawable.cpp" />
     <ClCompile Include="Flower.cpp" />
@@ -36,6 +37,7 @@
     <ClInclude Include="AbstractWindow.h" />
     <ClInclude Include="BezierCurve.h" />
     <ClInclude Include="Circle.h" />
+    <ClInclude Include="Cloud.h" />
     <ClInclude Include="DispatchEvent.h" />
     <ClInclude Include="Drawable.h" />
     <ClInclude Include="Flower.h" />

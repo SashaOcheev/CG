@@ -34,7 +34,7 @@ size_t GetCombinationsCount(size_t n, size_t k)
 float GetBezierBasis(const size_t number, const size_t count, const float position)
 {
 	// считаем i-й элемент полинома Берштейна
-	return GetCombinationsCount(count, number) * pow(position, number) * pow(1 - position, count - number);
+	return static_cast<float>(GetCombinationsCount(count, number) * pow(position, number) * pow(1 - position, count - number));
 }
 
 

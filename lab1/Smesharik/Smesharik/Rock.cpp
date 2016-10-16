@@ -10,12 +10,12 @@ const float DELTA = 30.f;
 CRock::CRock(float angle)
 {
 	angle /= 2;
-	angle *= M_PI / 180.f;
+	angle *= static_cast<float>(M_PI / 180.f);
 	m_basis = { tanf(angle) * HEIGHT, HEIGHT };
 	
 	//Снежная вершина
 	std::vector<glm::fvec2> vectorForBezier;
-	float step = 0.2f;
+	float step = 0.3f;
 	for (float i = -angle; i < angle; i += step)
 	{
 		i = (i > angle - step) ? angle : i;
