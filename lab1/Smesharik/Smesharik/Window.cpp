@@ -18,32 +18,6 @@ const glm::vec4 QUIET_GREEN = { 0.f, 0.5f, 0.2f, 1.f };
 
 CWindow::CWindow()
 {
-	/*
-   {
-        auto pFlower = std::make_unique<CMovableFlower>();
-        pFlower->SetupShape(40, 150, 6);
-        pFlower->SetCenterColor(LIGHT_YELLOW);
-        pFlower->SetPetalColor(RED);
-        pFlower->SetPosition({ 150, 220 });
-        m_flowers.push_back(std::move(pFlower));
-    }
-    {
-        auto pFlower = std::make_unique<CMovableFlower>();
-        pFlower->SetupShape(20, 60, 5);
-        pFlower->SetCenterColor(LIGHT_YELLOW);
-        pFlower->SetPetalColor(ORANGE);
-        pFlower->SetPosition({ 350, 140 });
-        m_flowers.push_back(std::move(pFlower));
-    }
-    {
-        auto pFlower = std::make_unique<CMovableFlower>();
-        pFlower->SetupShape(25, 70, 7);
-        pFlower->SetCenterColor(RED);
-        pFlower->SetPetalColor(YELLOW);
-        pFlower->SetPosition({ 270, 360 });
-        m_flowers.push_back(std::move(pFlower));
-    }
-	*/
 
 	//Солнце
 	auto sun = std::make_unique<CCircle>(70.f);
