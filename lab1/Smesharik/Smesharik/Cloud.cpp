@@ -24,15 +24,14 @@ CCloud::CCloud()
 		m_cloud.push_back(std::move(circle));
 	}
 
-	SetColor(m_color);
+	SetColor();
 }
 
-void CCloud::SetColor(const glm::vec3 &color)
+void CCloud::SetColor()
 {
-	m_color = color;
 	for (auto &circle : m_cloud)
 	{
-		circle.get()->SetColor(color);
+		circle.get()->SetColor(m_color, m_outColor);
 	}
 }
 

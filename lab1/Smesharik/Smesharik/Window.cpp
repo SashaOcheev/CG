@@ -22,7 +22,7 @@ CWindow::CWindow()
 	//Солнце
 	auto sun = std::make_unique<CCircle>(70.f);
 	sun->SetPosition({ 700, 100 });
-	sun->SetColor({ 1.f, 1.f, 0.f });
+	sun->SetColor({ 0.8f, 0.8f, 0.f }, { 1.f, 1.f, 0.f });
 	m_shapes.push_back(std::move(sun));
 
 	//облака

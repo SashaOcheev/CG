@@ -12,9 +12,15 @@ CCircle::CCircle(float radius)
 	}
 }
 
-void CCircle::SetColor(glm::vec3 color)
+void CCircle::SetColor(glm::vec3 color, glm::vec3 outColor)
 {
 	m_color = color;
+	if (outColor.x < 0.f)
+	{
+		m_outColor = color;
+		return;
+	}
+	m_outColor = outColor;
 }
 
 void CCircle::Redraw() const
@@ -24,6 +30,7 @@ void CCircle::Redraw() const
 	glVertex2f(0, 0);
 	for (size_t i = 0; i < m_line.size(); ++i)
 	{
+		glColor3f(m_outColor.x, m_outColor.y, m_outColor.z);
 		glVertex2f(m_line[i].x, m_line[i].y);
 	}
 	glEnd();

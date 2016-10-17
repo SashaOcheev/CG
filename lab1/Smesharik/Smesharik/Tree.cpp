@@ -27,7 +27,7 @@ CTree::CTree()
 		m_foliage.push_back(std::move(circle));
 	}
 
-	SetColor(m_color);
+	SetColor();
 }
 
 void CTree::Draw() const
@@ -48,12 +48,11 @@ void CTree::SetPosition(const glm::vec2 & position)
 	}
 }
 
-void CTree::SetColor(const glm::vec3 & color)
+void CTree::SetColor()
 {
-	m_color = color;
 	for (auto &circle : m_foliage)
 	{
-		circle.get()->SetColor(color);
+		circle.get()->SetColor(m_color, m_outColor);
 	}
 }
 
