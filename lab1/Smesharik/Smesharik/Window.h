@@ -5,6 +5,7 @@
 #include "Circle.h"
 #include "Rock.h"
 #include "Cloud.h"
+#include "MyFlower.h"
 #include <vector>
 
 class CWindow : public CAbstractInputControlWindow

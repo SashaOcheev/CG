@@ -74,6 +74,38 @@ CWindow::CWindow()
 	//meadow->SetPosition({ 400, 300 });
 	m_shapes.push_back(std::move(meadow));
 
+	//цветы
+	std::vector<glm::vec2> positions = {
+		{ 700, 320 },
+		{ 750, 500 },
+		{ 200, 550 },
+		{ 550, 450 },
+	};
+	for (auto &pos : positions)
+	{
+		auto pFlower = std::make_unique<CMyFlower>(15, 45, 6);
+		pFlower->SetCenterColor(LIGHT_YELLOW);
+		pFlower->SetPetalColor(RED);
+		pFlower->SetPosition(pos);
+		m_shapes.push_back(std::move(pFlower));
+	}
+
+	//цветы
+	positions = {
+		{ 60, 360 },
+		{ 515, 515 },
+		{ 430, 355 },
+		{ 200, 400 },
+	};
+	for (auto &pos : positions)
+	{
+		auto pFlower = std::make_unique<CMyFlower>(10, 30, 7);
+		pFlower->SetCenterColor(LIGHT_YELLOW);
+		pFlower->SetPetalColor(ORANGE);
+		pFlower->SetPosition(pos);
+		m_shapes.push_back(std::move(pFlower));
+	}
+
 	SetBackgroundColor({ 0.4f, 0.7f, 1.f, 1.f });
 }
 
