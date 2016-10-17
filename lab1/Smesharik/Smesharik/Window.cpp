@@ -106,6 +106,18 @@ CWindow::CWindow()
 		m_shapes.push_back(std::move(pFlower));
 	}
 
+	//стрекозы
+	positions = {
+		{ 120, 280 },
+		{ 230, 530 },
+		{ 730, 390 },
+	};
+	for (auto &pos : positions)
+	{
+		auto dragonFly = std::make_unique<CDragonFly>();
+		dragonFly->SetPosition(pos);
+		m_shapes.push_back(std::move(dragonFly));
+	}
 	SetBackgroundColor({ 0.4f, 0.7f, 1.f, 1.f });
 }
 

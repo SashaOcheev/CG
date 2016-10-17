@@ -57,6 +57,9 @@
     <ClCompile Include="MyFlower.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DragonFly.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbstractWindow.h">
@@ -96,6 +99,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MyFlower.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragonFly.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

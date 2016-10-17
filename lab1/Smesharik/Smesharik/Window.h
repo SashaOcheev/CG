@@ -6,6 +6,7 @@
 #include "Rock.h"
 #include "Cloud.h"
 #include "MyFlower.h"
+#include "DragonFly.h"
 #include <vector>
 
 class CWindow : public CAbstractInputControlWindow

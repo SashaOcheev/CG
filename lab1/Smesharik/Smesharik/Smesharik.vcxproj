@@ -24,6 +24,7 @@
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Cloud.cpp" />
     <ClCompile Include="DispatchEvent.cpp" />
+    <ClCompile Include="DragonFly.cpp" />
     <ClCompile Include="Drawable.cpp" />
     <ClCompile Include="Flower.cpp" />
     <ClCompile Include="main.cpp" />
@@ -40,6 +41,7 @@
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Cloud.h" />
     <ClInclude Include="DispatchEvent.h" />
+    <ClInclude Include="DragonFly.h" />
     <ClInclude Include="Drawable.h" />
     <ClInclude Include="Flower.h" />
     <ClInclude Include="Meadow.h" />
