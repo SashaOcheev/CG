@@ -118,6 +118,12 @@ CWindow::CWindow()
 		dragonFly->SetPosition(pos);
 		m_shapes.push_back(std::move(dragonFly));
 	}
+
+	//дерево
+	auto tree = std::make_unique<CTree>();
+	tree->SetPosition({ 500, 200 });
+	m_shapes.push_back(std::move(tree));
+
 	SetBackgroundColor({ 0.4f, 0.7f, 1.f, 1.f });
 }
 

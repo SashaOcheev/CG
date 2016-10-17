@@ -33,6 +33,7 @@
     <ClCompile Include="MyFlower.cpp" />
     <ClCompile Include="Rock.cpp" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Tree.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +50,7 @@
     <ClInclude Include="MyFlower.h" />
     <ClInclude Include="Rock.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Tree.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
